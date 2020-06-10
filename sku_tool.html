@@ -1,0 +1,307 @@
+<html>
+<body>
+
+
+<h1 align="center">小壹电子商务有限公司sku查找工具</h1>
+
+
+<h3>Note</h2>
+请在输入商品信息或sku后点击Complete！按钮得到结果
+
+<h3>根据商品信息生成sku</h2>
+
+
+
+<!-- <img src="https://raw.githubusercontent.com/ZexuanSun/pictures-test/master/WechatIMG292.jpeg"/>
+ --><br/>
+
+
+<label for="platform">请选择平台:</label>
+
+<select name="platform" id="platform">
+    <option value="0">Select</option>
+  <option value="amazon">Amazon</option>
+  <option value="wayfair">Wayfair</option>
+  <option value="homedepot">Home Depot</option>
+  <option value="self">独立站</option>
+</select>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+<!-- <script type='text/javascript'  src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ -->
+<label for="product">请选择产品:</label>
+<select name="product" id="product" onchange="configureDropDownLists(this,document.getElementById('shape'))">
+    <option value="0">Select</option>
+<option value="roman">罗马伞</option>
+<option value="banana">香蕉伞</option>
+<option value="ice_s">小制冰机</option>
+<option value="ice_b">大制冰机</option>
+</select>
+
+
+<label for="shape">请选择型号:</label>
+
+<select name="shape" id="shape">
+  <option value="">-- 请先选择产品 -- </option>
+<!-- 
+  <optgroup label="罗马伞">
+    <option value="0">Select</option>
+  <option value="nine">9ft</option>
+    <option value="ten">10ft</option>
+     </optgroup>
+<optgroup label="小制冰机">
+    <option value="0">Select</option>
+  <option value="s">15kg</option>
+    <option value="b">25kg</option>
+     </optgroup> -->
+
+</select>
+
+
+
+<script type="text/javascript">
+function configureDropDownLists(product, shape) {
+  var null_0 = ["-- 请先选择产品 --"]
+  var roman = ["select",'9ft', '10ft'];
+  var banana = ["select",'11ft', '12.5ft'];
+  // var names = ["select", 'John', 'David', 'Sarah'];
+
+  switch (product.value) {
+    case '0':
+      shape.options.length = 0;
+      for (i = 0; i < null_0.length; i++) {
+        createOption(shape, null_0[i], null_0[i]);
+      }
+      break;
+    case 'roman':
+      shape.options.length = 0;
+      for (i = 0; i < roman.length; i++) {
+        createOption(shape, roman[i], roman[i]);
+      }
+      break;
+    case 'banana':
+      shape.options.length = 0;
+      for (i = 0; i < banana.length; i++) {
+        createOption(shape, banana[i], banana[i]);
+      }
+      break;
+    default:
+      shape.options.length = 0;
+      break;
+  }
+
+  }
+
+function createOption(ddl, text, value) {
+  var opt = document.createElement('option');
+  opt.value = value;
+  opt.text = text;
+  ddl.options.add(opt);
+}
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+<!-- <script type='text/javascript' >
+$(document).ready(function () {
+    $("#product").change(function () {
+        var val = $(this).val();
+        if (val == "roman") {
+            $("#shape").html("<option value='0'>select<option value='nine'>9ft</option><option value='ten'>10ft</option>");
+        } else if (val == "banana") {
+            $("#shape").html("<option value='0'>select<option value='nine_b'>8ft</option><option value='11_b'>11ft</option>");
+    }else if (val == "0") {
+            $("#shape").html("<option value=''>-- 请先选择产品 -- </option>");
+        }
+    });
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<label for="color">请选择颜色:</label>
+<select name="color" id="color"  >
+    <option value="0">Select</option>
+  <option value="red">红色</option>
+  <option value="yellow">黄色</option>
+  <option value="blue">蓝色</option>
+  <option value="green">绿色</option>
+</select>
+
+<input id="clickMe" type="button" value="Complete!" onclick="run()" >
+
+<br/>
+<br/>
+Sku<br>
+<input type="text" id="sku" placeholder="sku id">
+
+
+<br/>
+
+
+<h3> 根据sku解析商品 </h2>
+
+请输入sku<br/>
+<input type="text" id="sku_d"  placeholder="Write Something !" >
+<input id="clickMe" type="button" value="Complete!" onclick="up()" >
+
+
+<br/>
+<br/>
+商品信息<br/>
+
+平台：
+<input type="text" id="plactform_o">
+
+颜色：
+<input type="text" id="color_o">
+
+
+
+
+
+<script type="text/javascript">
+    function run() {
+        var result_sku  = ""
+        var var_1 = document.getElementById("platform").value
+        if (var_1 == "amazon"){
+            result_sku += "am"
+        }else if (var_1 == "wayfair"){
+            result_sku += "wa"
+        }else{
+            result_sku += "ho"
+        }
+
+    var var_2 = document.getElementById("shape").value
+        if (var_2 == "nine"){
+            result_sku = result_sku + "9"
+        }else if(var_2 == "ten"){
+            result_sku = result_sku + "10"
+        }
+
+    var var_3 = document.getElementById("color").value
+        if (var_3 == "red"){
+            result_sku = result_sku + "001"
+        }else if(var_3 == "yellow"){
+            result_sku = result_sku + "002"
+        }
+
+
+
+
+    document.getElementById("sku").value = result_sku;
+
+
+    }
+</script>
+
+
+<script>
+    function up() {
+        //if (document.getElementById("srt").value != "") {
+            var dop = document.getElementById("sku_d").value;
+        //}
+        var  result_d = ""
+         var_1 = dop.substr(0,2)
+         if(var_1 == 'ao'){
+          document.getElementById("plactform_o").value = "Amazon";
+
+         }else if(var_1 == 'wa'){
+          document.getElementById("plactform_o").value = "Wayfair";
+         }
+
+
+         var_2 = dop.substr(2,3)
+         if(var_2 == "001")
+         {
+          document.getElementById("color_o").value = "red";
+         }else if(var_2 == "002")
+         {
+          document.getElementById("color_o").value = "yellow";
+         }
+    }
+</script>
+
+
+ <!-- <select id="Ultra" onchange="run()">  
+     <option value="0">Select</option>
+     <option value="8">text1</option>
+     <option value="5">text2</option>
+     <option value="4">text3</option>
+</select><br><br>
+TextBox1<br>
+<input type="text" id="srt" placeholder="get value on option select"><br>
+TextBox2<br>
+<input type="text" id="rtt"  placeholder="Write Something !" onkeyup="up()">-->
+
+
+<!-- <script>
+    function run() {
+        var_1 = document.getElementById("Ultra").value
+        if (var_1 == "8"){
+        document.getElementById("srt").value = "test";
+    }
+    }
+</script>
+
+
+<script>
+    function up() {
+        //if (document.getElementById("srt").value != "") {
+            var dop = document.getElementById("srt").value;
+        //}
+        alert(dop);
+    }
+</script>
+
+
+<script>
+    function up() {
+        var dop = document.getElementById("srt").value;
+        pop(dop); // Calling function pop
+    }
+
+    function pop(val) {
+        alert(val);
+    }?
+</script>  -->
+
+
+</body>
+</html>
