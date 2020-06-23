@@ -169,6 +169,12 @@ $(document).ready(function () {
 
 <input id="clickMe" type="button" value="Complete!" onclick="run()" >
 
+
+
+
+
+
+
 <br/>
 <br/>
 Sku<br>
@@ -176,6 +182,15 @@ Sku<br>
 
 
 <br/>
+
+
+<br/>
+Picture
+<br/>
+<img id="product_pic" src="figures/test_pic.png" style="display: none"
+style="width:200px">
+
+
 
 
 <h3> 根据sku解析商品 </h2>
@@ -229,7 +244,9 @@ Sku<br>
 
 
     document.getElementById("sku").value = result_sku;
-
+    var pic_name = 'figures/' +  result_sku +'.png';
+    document.getElementById('product_pic').src = pic_name;
+    document.getElementById('product_pic').style.display = 'block';
 
     }
 </script>
