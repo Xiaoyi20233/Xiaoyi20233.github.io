@@ -266,8 +266,8 @@ $(function () {
 
 </head>
 <div>
-  <img src='figures/umbre.png' style="width:  200px" />
-  <img src='figures/base.png' style="width:  1px" class="imtip" />
+  <img id = 'main_image' src='figures/test_pic.png' style="width:  200px" />
+  <img id = 'second_image' src='figures/base.png' style="width:  1px" class="imtip" />
 </div>
 
 <br/>
@@ -349,7 +349,7 @@ echo file_get_contents("des/test.txt");
     document.getElementById('product_pic').src = pic_name;
     document.getElementById('product_pic').style.display = 'block';
     document.getElementById('dis_text').src = 'des/change.txt';
-
+    document.getElementById('main_image').src = 'figures/umbre.png';
     }
 </script>
 
