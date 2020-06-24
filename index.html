@@ -191,6 +191,107 @@ Picture
 style="width:200px">
 
 
+<!-- <style>
+div {
+  .imageWrapper {
+  position: relative;
+}
+.overlayImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+}
+</style>
+
+
+<script>
+$(function () {
+    var position = $("#i1").offset();
+    // $('#i2').css({ position:'absolute', top:position.top, left: position.left});
+    $('#i2').css({ position:'absolute', top:position.top-10, left: position.left+5});
+});
+</script>
+
+
+<img id='i1' src='figures/am001.png' style="width:  200px" />
+<img id='i2' src='figures/test_pic.png' style="width:  200px"/>
+
+ -->
+
+<!-- <head>
+<style>
+#container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+#main_image{
+    /*width: 100%;
+    height: 100%;*/
+}
+#overlay_image{
+    position: absolute;
+    bottom: 900px;
+    right: 700px;
+}
+</style>
+</head>
+
+
+
+<div id="container">
+    <img src="figures/am001.png" style="width:  150px" id="main_image"></div>
+    <img src='figures/test_pic.png' style="width:  150px" id="overlay_image"></div>
+</div>
+ -->
+
+
+<head>
+<style type="text/css">
+    div {
+  position: relative;
+  display: inline;
+}
+.imtip {
+  position: absolute;
+  bottom: 22;
+  right: 121;
+}
+
+
+
+
+</style>
+
+</head>
+<div>
+  <img src='figures/umbre.png' style="width:  200px" />
+  <img src='figures/base.png' style="width:  1px" class="imtip" />
+</div>
+
+<br/>
+Description
+<br/>
+
+
+<iframe src="des/test.txt" id = 'dis_text'></iframe> 
+
+
+
+<!-- <?php
+echo file_get_contents("des/test.txt");
+?> -->
+
+
+
+<!-- <div id="container">
+</div>
+
+<script>
+    $("#container").load("des/test.txt");
+</script> -->
+
 
 
 <h3> 根据sku解析商品 </h2>
@@ -247,6 +348,7 @@ style="width:200px">
     var pic_name = 'figures/' +  result_sku +'.png';
     document.getElementById('product_pic').src = pic_name;
     document.getElementById('product_pic').style.display = 'block';
+    document.getElementById('dis_text').src = 'des/change.txt';
 
     }
 </script>
