@@ -1,0 +1,70 @@
+var all_store = ['Bluupatio','Leconte','Wiki','Bluu']
+var code_store = ['BL','LE','WI','NA']
+
+
+var all_product = ['zz']
+var code_product = ['ZZ']
+
+var all_specify = ['acce','umbre','bar','base','patio']
+var code_specify = ['000','001','002','003','004']
+
+
+code_texture = ['美标三级', '美标四级','色织布','Olefin', 'Sunbrella']
+code_texture_2 = ['G3','G4','YD','OL','SA']
+
+
+
+all_color = ['select','Sailor', 'Burnt Orange', 'Coral', 'Salmon', 'Turquoise Blue',
+       'Dark Spring Green', 'Olive', 'Midnight Blue', 'Wood', 'Mocha',
+       'Ocean Stripe', 'Coastal', 'Toucan', 'Palatinate Purple',
+       'Dim Gray', 'Mood Indigo', 'Teal Blue', 'Tiffany Blue',
+       'Baby Blue', 'Oatmeal', 'Robin egg blue', 'Classic Blue',
+       'Navy Blue', 'Coyote brown', 'Crimson', 'Aegean Blue', 'Lake Blue',
+       'Barley', 'Natural', 'Burgundy', 'Hunter Green', 'Cherry',
+       'Heather Beige', 'Dark Blue', 'Denim', 'Vintage Strip', 'Raisin',
+       'Navy Blue', 'Forest Green', 'Golden Ecru', 'Jockey Red', 'Beige',
+       'Slytherin Strip', 'Tiffany Blue', 'Maroon', 'Navy Blue',
+       'Cadet Gray', 'Taupe', 'Brick Red', 'Pure Red', 'Sea Wave Blue',
+       'Retro Stripe', 'Ocean Blue', 'Baby Pink', 'Sunflower Yellow',
+       'Fluorescent Green', 'Reseda Green', 'Coffee', 'Terrace Fern',
+       'Antique Beige', 'Beige', 'Pacific Yellow', 'Hot Pink',
+       'Apple Green', 'British Stripe', 'Zebra', 'Corsican Blue',
+       'Dark Gray', 'Leopard']  ;
+code_color =  ['001Sai', '002Bur', '003Cor', '004Sal', '005Tur', '006Dar',
+       '007Oli', '008Mid', '009Woo', '010Moc', '011Oce', '012Coa',
+       '013Tou', '014Pal', '015Dim', '016Moo', '017Tea', '018Tif',
+       '019Bab', '020Oat', '021Rob', '022Cla', '023Nav', '024Coy',
+       '025Cri', '026Aeg', '027Lak', '028Bar', '029Nat', '030Bur',
+       '031Hun', '032Che', '033Hea', '034Dar', '035Den', '036Vin',
+       '037Rai', '038Nav', '039For', '040Gol', '041Joc', '042Bei',
+       '043Sly', '044Tif', '045Mar', '046Nav', '047Cad', '048Tau',
+       '049Bri', '050Pur', '051Sea', '052Ret', '053Oce', '054Bab',
+       '055Sun', '056Flu', '057Res', '058Cof', '059Ter', '060Ant',
+       '061Bei', '062Pac', '063Hot', '064App', '065Bri', '066Zeb',
+       '067Cor', '068Dar', '069Leo']
+
+all_w = ['180g', '200g', '200g', '200g', '200g', '180g', '200g', '200g',
+       '200g', '200g', '180g', '160g', '160g', '200g', '180g', '220g',
+       '200g', '180g', '160g', '220g', '180g', '220g', '220g', '220g',
+       '180g', '180g', '180g', '250g', '180g', '180g', '180g', '220g',
+       '280g', '220g', '220g', '200g', '260g', '220g', '250g', '200g',
+       '240g', '250g', '250g', '240g', '250g', '205g', '180g', '205g',
+       '205g', '205g', '205g', '180g', '160g', '200g', '200g', '180g',
+       '220g', '200g', '200g', '180g', '200g', '200g', '180g', '200g',
+       '160g', '160g', '160g', '250g', '200g'
+       ]
+all_t = ['80h', '80h', '80h', '80h', '80h', 'not given', 'not given', '80h',
+       'not given', '80h', '80h', '80h', 'not given', 'not given',
+       'not given', '80h', '80h', '80h', 'not given', 'not given',
+       'not given', 'not given', 'not given', '80h', 'not given', '80h',
+       'not given', 'not given', '80h', '80h', '80h', 'not given',
+       '1500h', 'not given', 'not given', 'not given', 'not given',
+       'not given', 'not given', 'not given', 'not given', 'not given',
+       'not given', 'not given', 'not given', 'not given', 'not given',
+       'not given', 'not given', 'not given', 'not given', '80h',
+       'not given', '80h', '80h', '80h', 'not given', 'not given',
+       'not given', '80h', '80h', 'not given', 'not given', 'not given',
+       'not given', 'not given', '80h', 'not given', '100h'
+       ]
+code_texture = ['铁','铝']
+code_texture_2 = ['FE','AL']
